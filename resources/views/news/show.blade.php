@@ -34,7 +34,7 @@
             <h1 class="fw-bold text-dark mb-4" style="line-height: 1.3;">{{ $news->title }}</h1>
             
             <div class="bg-white bg-opacity-50 rounded-3 border p-4 shadow-sm">
-                <p class="text-dark mb-0" style="font-size: 1.1rem; line-height: 1.8; white-space: pre-line;">
+                <p class="text-dark mb-0 text-break" style="font-size: 1.1rem; line-height: 1.8; white-space: pre-line;">
                     {{ $news->description }}
                 </p>
             </div>

@@ -28,7 +28,7 @@
                             <div class='d-flex justify-content-center mb-3 mt-2'>
                                 <img class='news-image img-fluid rounded' style="box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-height: 200px; object-fit: cover;" src="{{ asset('assets/images/' . $article->image)}}" alt='News Image'>
                             </div>
-                            <p class="card-text add-read-more show-less-content flex-grow-1">{{ $article->description }}</p>
+                            <p class="card-text add-read-more show-less-content flex-grow-1 text-break">{{ $article->description }}</p>
                             <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center" style="border-color: var(--glass-border) !important;">
                                 <span class="badge {{ $article->status == 1 ? 'bg-success' : 'bg-secondary' }} px-3 py-2 rounded-pill">
                                     {{ $article->status == 1 ? 'Active' : 'Inactive' }}

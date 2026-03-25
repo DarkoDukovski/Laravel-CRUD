@@ -22,7 +22,7 @@
         
         <div class="card-body d-flex flex-column p-4">
             <h4 class="card-title fw-bold text-dark mb-2" style="font-size: 1.25rem;">{{ $article->title }}</h4>
-            <p class="card-text text-muted mb-4" style="font-size: 0.95rem; line-height: 1.5; flex-grow: 1;">{{ Str::limit($article->description, 100) }}</p>
+            <p class="card-text text-muted mb-4 text-break" style="font-size: 0.95rem; line-height: 1.5; flex-grow: 1;">{{ Str::limit($article->description, 100) }}</p>
             
             <div class="d-flex justify-content-between pt-3 border-top border-light mt-auto">
                 <form action="{{ route('news.destroy', $article->id) }}" method="POST" class="w-100 d-flex gap-2 justify-content-center">
