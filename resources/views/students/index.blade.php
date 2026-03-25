@@ -44,9 +44,9 @@
                                 </div>
                             @endif
                         </td>
-                        <td class="px-3 py-3 fw-medium text-dark">{{ $student->name }}</td>
+                        <td class="px-3 py-3 fw-medium text-dark text-break">{{ $student->name }}</td>
                         <td class="px-3 py-3 text-muted">{{ $student->grade }}</td>
-                        <td class="px-3 py-3 text-muted">{{ $student->email }}</td>
+                        <td class="px-3 py-3 text-muted text-break">{{ $student->email }}</td>
                         <td class="px-3 py-3 text-muted">{{ $student->phone }}</td>
                         <td class="px-3 py-3 text-muted"><span class="badge bg-light text-dark border">{{ $student->course }}</span></td>
                         <td class="px-3 py-3 text-muted">{{ $student->dob }}</td>

@@ -19,7 +19,7 @@
                         {{ substr($student->name, 0, 1) }}
                     </div>
                 @endif
-                <h3 class="mt-3 fw-bold text-dark">{{ $student->name }}</h3>
+                <h3 class="mt-3 fw-bold text-dark text-break">{{ $student->name }}</h3>
                 <span class="badge bg-light text-primary border px-3 py-2 rounded-pill mt-1">{{ $student->course }}</span>
             </div>
             
@@ -28,7 +28,7 @@
                     <div class="col-sm-6">
                         <div class="p-3 bg-white bg-opacity-50 rounded-3 border h-100 shadow-sm">
                             <span class="text-uppercase text-muted" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px;">Email Address</span>
-                            <div class="fw-medium text-dark mt-1">{{ $student->email }}</div>
+                            <div class="fw-medium text-dark mt-1 text-break">{{ $student->email }}</div>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -63,7 +63,7 @@
         
         <div class="bg-white bg-opacity-50 rounded-3 border p-4 shadow-sm">
             <span class="text-uppercase text-muted d-block mb-2" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px;">Student Details & Bio</span>
-            <p class="text-dark mb-0" style="line-height: 1.6;">
+            <p class="text-dark mb-0 text-break" style="line-height: 1.6;">
                 {{ $student->detail ?: 'No additional details provided for this student.' }}
             </p>
         </div>
