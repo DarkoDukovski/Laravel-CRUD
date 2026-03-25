@@ -58,9 +58,9 @@
                             @endisset 
                         </td>
                         <td class="px-3 py-3 rounded-end text-center">
-                            <form action="{{ route('students.destroy',$student->id) }}" method="POST" class="d-inline">
+                            <form action="{{ route('students.destroy',$student->id) }}" method="POST" class="d-flex justify-content-center align-items-center gap-2 m-0">
                                 <a class="btn btn-sm btn-outline-info rounded-pill px-3" href="{{ route('students.show',$student->id) }}">Show</a>
-                                <a class="btn btn-sm btn-outline-primary rounded-pill px-3 mx-1" href="{{ route('students.edit',$student->id) }}">Edit</a>
+                                <a class="btn btn-sm btn-outline-primary rounded-pill px-3" href="{{ route('students.edit',$student->id) }}">Edit</a>
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-outline-danger rounded-pill px-3">Delete</button>

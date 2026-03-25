@@ -60,6 +60,9 @@ A simple and clean Laravel CRUD application I built to manage student records an
    ```
    Now visit `http://localhost:8000`.
 
+7. **Create a User Account**
+   By default, there are no users in the database. When you first start the application, you must go to the **Register** page to create an account before you can log in and access the dashboard.
+
 ---
 
 Feedback and contributions are welcome.

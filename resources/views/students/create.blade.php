@@ -43,43 +43,43 @@
                 <!-- Half Width: Name -->
                 <div class="col-md-6">
                     <label class="form-label-modern d-block">Full Name</label>
-                    <input type="text" name="name" class="form-control-modern" placeholder="e.g. John Doe">
+                    <input type="text" name="name" class="form-control-modern" placeholder="e.g. John Doe" value="{{ old('name') }}">
                 </div>
                 
                 <!-- Half Width: Grade -->
                 <div class="col-md-6">
                     <label class="form-label-modern d-block">Grade</label>
-                    <input type="number" name="grade" class="form-control-modern" placeholder="e.g. 10">
+                    <input type="number" name="grade" class="form-control-modern" placeholder="e.g. 10" value="{{ old('grade') }}">
                 </div>
                 
                 <!-- Half Width: Email -->
                 <div class="col-md-6">
                     <label class="form-label-modern d-block">Email Address</label>
-                    <input type="email" name="email" class="form-control-modern" placeholder="john@example.com">
+                    <input type="email" name="email" class="form-control-modern" placeholder="john@example.com" value="{{ old('email') }}">
                 </div>
                 
                 <!-- Half Width: Phone -->
                 <div class="col-md-6">
                     <label class="form-label-modern d-block">Phone Number</label>
-                    <input type="tel" name="phone" class="form-control-modern" placeholder="+1 234 567 890">
+                    <input type="tel" name="phone" class="form-control-modern" placeholder="+1 234 567 890" value="{{ old('phone') }}">
                 </div>
                 
                 <!-- Half Width: Course -->
                 <div class="col-md-6">
                     <label class="form-label-modern d-block">Course</label>
-                    <input type="text" name="course" class="form-control-modern" placeholder="e.g. Computer Science">
+                    <input type="text" name="course" class="form-control-modern" placeholder="e.g. Computer Science" value="{{ old('course') }}">
                 </div>
                 
                 <!-- Half Width: DOB -->
                 <div class="col-md-6">
                     <label class="form-label-modern d-block">Date of Birth</label>
-                    <input type="date" name="dob" class="form-control-modern">
+                    <input type="date" name="dob" class="form-control-modern" value="{{ old('dob') }}">
                 </div>
                 
                 <!-- Full Width: Detail -->
                 <div class="col-12">
                     <label class="form-label-modern d-block">Student Details / Bio</label>
-                    <textarea class="form-control-modern" style="height: 120px; resize: none;" name="detail" placeholder="Enter student background info..."></textarea>
+                    <textarea class="form-control-modern" style="height: 120px; resize: none;" name="detail" placeholder="Enter student background info...">{{ old('detail') }}</textarea>
                 </div>
                 
                 <!-- Full Width: University -->
@@ -88,7 +88,7 @@
                     <select name="university" class="form-control-modern">
                         <option value="">Select University</option>
                         @foreach($universities as $university)
-                            <option value="{{ $university->id }}">{{ $university->name }}</option>
+                            <option value="{{ $university->id }}" {{ old('university') == $university->id ? 'selected' : '' }}>{{ $university->name }}</option>
                         @endforeach
                     </select>
                 </div>

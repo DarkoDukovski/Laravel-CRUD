@@ -29,13 +29,13 @@
                 <!-- Full Width: Title -->
                 <div class="col-12">
                     <label class="form-label-modern d-block">News Title</label>
-                    <input type="text" name="title" value="{{ $news->title }}" class="form-control-modern" placeholder="Enter headline...">
+                    <input type="text" name="title" value="{{ old('title', $news->title) }}" class="form-control-modern" placeholder="Enter headline...">
                 </div>
                 
                 <!-- Full Width: Description -->
                 <div class="col-12">
                     <label class="form-label-modern d-block">Description</label>
-                    <textarea name="description" class="form-control-modern" style="height: 120px; resize: none;" placeholder="Write your news content here...">{{ $news->description }}</textarea>
+                    <textarea name="description" class="form-control-modern" style="height: 120px; resize: none;" placeholder="Write your news content here...">{{ old('description', $news->description) }}</textarea>
                 </div>
                 
                 <!-- Half Width: Status -->
@@ -43,8 +43,8 @@
                     <label class="form-label-modern d-block">Status</label>
                     <select name="status" class="form-control-modern">
                         <option value="">--Select Status--</option>
-                        <option value="1" {{ $news->status == 1 ? 'selected' : '' }}>Active</option>
-                        <option value="0" {{ $news->status == 0 ? 'selected' : '' }}>Inactive</option>
+                        <option value="1" {{ old('status', $news->status) == '1' ? 'selected' : '' }}>Active</option>
+                        <option value="0" {{ old('status', $news->status) == '0' ? 'selected' : '' }}>Inactive</option>
                     </select>
                 </div>
                 

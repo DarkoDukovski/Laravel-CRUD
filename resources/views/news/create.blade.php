@@ -29,22 +29,21 @@
                 <!-- Full Width: Title -->
                 <div class="col-12">
                     <label class="form-label-modern d-block">News Title</label>
-                    <input type="text" name="title" class="form-control-modern" placeholder="Enter headline...">
+                    <input type="text" name="title" class="form-control-modern" placeholder="Enter headline..." value="{{ old('title') }}">
                 </div>
                 
                 <!-- Full Width: Description -->
                 <div class="col-12">
                     <label class="form-label-modern d-block">Description</label>
-                    <textarea name="description" class="form-control-modern" style="height: 120px; resize: none;" placeholder="Write your news content here..."></textarea>
+                    <textarea name="description" class="form-control-modern" style="height: 120px; resize: none;" placeholder="Write your news content here...">{{ old('description') }}</textarea>
                 </div>
-                
                 <!-- Half Width: Status -->
                 <div class="col-md-6">
                     <label class="form-label-modern d-block">Status</label>
                     <select name="status" class="form-control-modern">
                         <option value="">--Select Status--</option>
-                        <option value="1">Active</option>
-                        <option value="0">Inactive</option>
+                        <option value="1" {{ old('status') == '1' ? 'selected' : '' }}>Active</option>
+                        <option value="0" {{ old('status') == '0' ? 'selected' : '' }}>Inactive</option>
                     </select>
                 </div>
                 

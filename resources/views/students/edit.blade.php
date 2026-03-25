@@ -45,43 +45,43 @@
                 <!-- Half Width: Name -->
                 <div class="col-md-6">
                     <label class="form-label-modern d-block">Full Name</label>
-                    <input type="text" name="name" value="{{ $student->name }}" class="form-control-modern" placeholder="e.g. John Doe">
+                    <input type="text" name="name" value="{{ old('name', $student->name) }}" class="form-control-modern" placeholder="e.g. John Doe">
                 </div>
                 
                 <!-- Half Width: Grade -->
                 <div class="col-md-6">
                     <label class="form-label-modern d-block">Grade</label>
-                    <input type="number" name="grade" value="{{ $student->grade }}" class="form-control-modern" placeholder="e.g. 10">
+                    <input type="number" name="grade" value="{{ old('grade', $student->grade) }}" class="form-control-modern" placeholder="e.g. 10">
                 </div>
                 
                 <!-- Half Width: Email -->
                 <div class="col-md-6">
                     <label class="form-label-modern d-block">Email Address</label>
-                    <input type="email" name="email" value="{{ $student->email }}" class="form-control-modern" placeholder="john@example.com">
+                    <input type="email" name="email" value="{{ old('email', $student->email) }}" class="form-control-modern" placeholder="john@example.com">
                 </div>
                 
                 <!-- Half Width: Phone -->
                 <div class="col-md-6">
                     <label class="form-label-modern d-block">Phone Number</label>
-                    <input type="tel" name="phone" value="{{ $student->phone }}" class="form-control-modern" placeholder="+1 234 567 890">
+                    <input type="tel" name="phone" value="{{ old('phone', $student->phone) }}" class="form-control-modern" placeholder="+1 234 567 890">
                 </div>
                 
                 <!-- Half Width: Course -->
                 <div class="col-md-6">
                     <label class="form-label-modern d-block">Course</label>
-                    <input type="text" name="course" value="{{ $student->course }}" class="form-control-modern" placeholder="e.g. Computer Science">
+                    <input type="text" name="course" value="{{ old('course', $student->course) }}" class="form-control-modern" placeholder="e.g. Computer Science">
                 </div>
                 
                 <!-- Half Width: DOB -->
                 <div class="col-md-6">
                     <label class="form-label-modern d-block">Date of Birth</label>
-                    <input type="date" name="dob" value="{{ $student->dob }}" class="form-control-modern">
+                    <input type="date" name="dob" value="{{ old('dob', $student->dob) }}" class="form-control-modern">
                 </div>
                 
                 <!-- Full Width: Detail -->
                 <div class="col-12">
                     <label class="form-label-modern d-block">Student Details / Bio</label>
-                    <textarea class="form-control-modern" style="height: 120px; resize: none;" name="detail" placeholder="Enter student background info...">{{ $student->detail }}</textarea>
+                    <textarea class="form-control-modern" style="height: 120px; resize: none;" name="detail" placeholder="Enter student background info...">{{ old('detail', $student->detail) }}</textarea>
                 </div>
                 
                 <!-- Full Width: University -->
@@ -90,7 +90,7 @@
                     <select name="university_id" class="form-control-modern">
                         <option value="">Select University</option>
                         @foreach ($universities as $university)
-                            <option value="{{ $university->id }}" {{ $student->university_id == $university->id ? 'selected' : '' }}>
+                            <option value="{{ $university->id }}" {{ old('university_id', $student->university_id) == $university->id ? 'selected' : '' }}>
                                 {{ $university->name }}
                             </option>
                         @endforeach
