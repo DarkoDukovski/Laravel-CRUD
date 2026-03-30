@@ -19,8 +19,8 @@ A simple and clean Laravel CRUD application I built to manage student records an
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/your-username/university-platform.git
-   cd university-platform
+   git clone https://github.com/DarkoDukovski/Laravel-CRUD.git
+   cd Laravel-CRUD
    ```
 
 2. **Install dependencies**
@@ -44,7 +44,7 @@ A simple and clean Laravel CRUD application I built to manage student records an
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
    DB_PORT=3306
-   DB_DATABASE=your_database_name
+   DB_DATABASE=laravel
    DB_USERNAME=root
    DB_PASSWORD=
    ```
@@ -54,13 +54,19 @@ A simple and clean Laravel CRUD application I built to manage student records an
    php artisan migrate
    ```
 
-6. **Start the server**
+6. **Install frontend dependencies & compile assets**
+   ```bash
+   npm install
+   npm run build
+   ```
+
+7. **Start the server**
    ```bash
    php artisan serve
    ```
    Now visit `http://localhost:8000`.
 
-7. **Create a User Account**
+8. **Create a User Account**
    By default, there are no users in the database. When you first start the application, you must go to the **Register** page to create an account before you can log in and access the dashboard.
 
 ---
